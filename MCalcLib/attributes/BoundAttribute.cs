@@ -6,7 +6,7 @@ using System.Text;
 namespace MCalcLib.attributes
 {
     [AttributeUsage(AttributeTargets.Field|AttributeTargets.Property,Inherited=false,AllowMultiple=true)]
-    public class BoundAttribute : Attribute
+    sealed class BoundAttribute : Attribute
     {
         /// <summary>
         /// Название параметра в ГОСТе
