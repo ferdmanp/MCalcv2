@@ -3,7 +3,7 @@
   <Class Name="MCalcLib.attributes.ItemParameterAttribute">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>attributes\ItemParameterAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -12,6 +12,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>attributes\ItemPropertiesAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.attributes.BoundAttribute">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>attributes\BoundAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

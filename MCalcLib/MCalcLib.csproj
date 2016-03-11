@@ -38,14 +38,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="attributes\BoundAttribute.cs" />
     <Compile Include="attributes\ItemParameterAttribute.cs" />
     <Compile Include="attributes\ItemPropertiesAttribute.cs" />
+    <Compile Include="classes\Standard.cs" />
+    <Compile Include="classes\StandardValidator.cs" />
+    <Compile Include="GlobalEnums.cs" />
+    <Compile Include="interfaces\IStandardised.cs" />
+    <Compile Include="objects\objectBeam.cs" />
     <Compile Include="objects\objectFixture.cs" />
     <Compile Include="objects\objectItemBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AttributesClassDiagram.cd" />
+    <None Include="ClassesClassDiagramm.cd" />
     <None Include="ObjectsClassDiagramm.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

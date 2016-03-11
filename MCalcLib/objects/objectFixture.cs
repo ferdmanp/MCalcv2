@@ -12,7 +12,7 @@ namespace MCalcLib.objects
         /// <summary>
         /// Диаметр детали
         /// </summary>
-        [ItemParameter(DisplayName = "d")]
+        [Bound(StandardName="d",Description="Диаметр,мм")]
         public double Diameter { get; set; }
 
 

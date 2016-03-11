@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="MCalcLib.objects.objectFixture">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Position X="1" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQgAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>objects\objectFixture.cs</FileName>
@@ -13,6 +13,14 @@
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>objects\objectItemBase.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectBeam">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\objectBeam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
