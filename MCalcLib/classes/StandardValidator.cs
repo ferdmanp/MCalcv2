@@ -21,7 +21,7 @@ namespace MCalcLib.classes
                 foreach(var attr in property.GetCustomAttributes(typeof(BoundAttribute),false))
                 {
                     string locStandardName = ((BoundAttribute)attr).StandardName;
-                    if (standard.BoundProperties[locStandardName] == null)
+                    if (standard.Bounds[locStandardName] == null)
                         result = ValidationResult.Failure;
                 }
             }

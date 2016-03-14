@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
+using MCalcLib.attributes;
 
 namespace MCalcLib.classes
 {
@@ -21,12 +23,36 @@ namespace MCalcLib.classes
         /// <summary>
         /// таблица габаритных свойств
         /// </summary>
-        public Hashtable BoundProperties;
+        public BoundsList Bounds { get; set; }
 
         /// <summary>
         /// Вес 1м погонного
         /// </summary>
         public double DensityWeight { get; set; }
-        
+
+        [Obsolete]
+        public object this[string key]
+        {
+            get;
+            set;            
+        }
+
+        public static Standard Init<T>()
+        {
+            Standard standard = new Standard();
+            Type type = typeof(T);
+
+            foreach(var prop in type.GetProperties(BindingFlags.Public))
+            {
+                foreach(var attr in prop.GetCustomAttributes(typeof(BoundAttribute),false))
+                {
+                    string key = ((BoundAttribute)attr).StandardName;
+                    standard.Bounds[key] = 1.0;
+                    //standard.DensityWeight
+                }
+            }
+
+            return standard;
+        }
     }
 }

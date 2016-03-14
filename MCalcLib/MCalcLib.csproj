@@ -41,6 +41,7 @@
     <Compile Include="attributes\BoundAttribute.cs" />
     <Compile Include="attributes\ItemParameterAttribute.cs" />
     <Compile Include="attributes\ItemPropertiesAttribute.cs" />
+    <Compile Include="classes\BoundsList.cs" />
     <Compile Include="classes\Standard.cs" />
     <Compile Include="classes\StandardValidator.cs" />
     <Compile Include="GlobalEnums.cs" />

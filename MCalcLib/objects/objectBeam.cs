@@ -29,6 +29,8 @@ namespace MCalcLib.objects
 
         #region --Private--
 
+        Standard standard;
+
         private ValidationResult validateStandard()
         {
             var result = ValidationResult.Failure;
@@ -47,7 +49,10 @@ namespace MCalcLib.objects
             var validationResult=validator.Validate(standard);
             if(validationResult==ValidationResult.Success)
             {
-                
+                this.Height = (double)standard.Bounds["h"];//.BoundProperties["h"];
+                this.ShelfWidth             =   (double)standard.Bounds["b"];
+                this.WebThickness           =   (double)standard.Bounds["S"];
+                this.AverageShelfThickness  =   (double)standard.Bounds["t"];
             }
                 //for each class member marked with [Bound]  
                     //get standard item name
