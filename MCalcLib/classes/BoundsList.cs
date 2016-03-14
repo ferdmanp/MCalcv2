@@ -6,7 +6,12 @@ using System.Text;
 
 namespace MCalcLib.classes
 {
-    public class BoundsList
+    /// <summary>
+    /// Список габаритных параметров с индексным доступом
+    /// </summary>
+    
+        //TODO: Реализовать IEnumerable
+    public class BoundsList//:IEnumerable
     {
         private Hashtable bounds;
 
@@ -18,8 +23,13 @@ namespace MCalcLib.classes
                 if (bounds.ContainsKey(key))
                     bounds[key] = value;
                 else
-                    bounds.Add(key, value);
+                    bounds.Add(key, value); 
             }
         }
+
+        //public IEnumerator GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

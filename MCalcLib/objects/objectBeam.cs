@@ -5,6 +5,7 @@ using System.Text;
 using MCalcLib.interfaces;
 using MCalcLib.classes;
 using MCalcLib.attributes;
+using MCalcLib.exceptions;
 
 namespace MCalcLib.objects
 {
@@ -29,7 +30,7 @@ namespace MCalcLib.objects
 
         #region --Private--
 
-        Standard standard;
+        Standard standard = Standard.Init<objectBeam>();
 
         private ValidationResult validateStandard()
         {
@@ -42,6 +43,12 @@ namespace MCalcLib.objects
 
 
         #region --IStandardised members--
+        /// <summary>
+        /// Применить стандартные настройки параметров
+        /// </summary>        
+        /// <param name="standard">Экземпляр стандарта</param>
+        /// <remarks>Если стандарт не проходит валидацию - выбрасывается исключение</remarks>
+        /// <exception cref="InvalidStandardException"/>
         public void ApplyStandard(Standard standard)
         {
             StandardValidator<objectBeam> validator = new StandardValidator<objectBeam>();
@@ -50,15 +57,16 @@ namespace MCalcLib.objects
             if(validationResult==ValidationResult.Success)
             {
                 this.Height = (double)standard.Bounds["h"];//.BoundProperties["h"];
-                this.ShelfWidth             =   (double)standard.Bounds["b"];
-                this.WebThickness           =   (double)standard.Bounds["S"];
-                this.AverageShelfThickness  =   (double)standard.Bounds["t"];
+                this.ShelfWidth = (double)standard.Bounds["b"];
+                this.WebThickness = (double)standard.Bounds["S"];
+                this.AverageShelfThickness = (double)standard.Bounds["t"];
+                this.standard = standard;
             }
-                //for each class member marked with [Bound]  
-                    //get standard item name
-                    //apply value from standard to property
-                //end for each
-            //endif
+            else
+            {
+                throw new InvalidStandardException(String.Format(@"Ошибка применения стандарта {0}!", standard.Name));
+            }
+                
         }
 
         #endregion

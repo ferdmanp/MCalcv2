@@ -10,10 +10,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            MCalcLib.objects.objectItemBase fixture = new objectFixture { Diameter = 10 };
-            Console.WriteLine(fixture.Name);
-            Console.WriteLine(fixture.DensityWeight);
-            Console.ReadKey();
+            var beam = new MCalcLib.objects.objectBeam();
+            beam.ApplyStandard(new MCalcLib.classes.Standard());
         }
     }
 }

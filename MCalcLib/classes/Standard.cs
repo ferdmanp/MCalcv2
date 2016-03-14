@@ -11,7 +11,7 @@ namespace MCalcLib.classes
     public class Standard
     {
         /// <summary>
-        /// Название ГОСТа
+        /// Название стандарта
         /// </summary>
         public string Name { get; set; }
 
@@ -19,6 +19,11 @@ namespace MCalcLib.classes
         /// Описание ГОСТа
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Ссылка на группу-родителя
+        /// </summary>
+        public StandardGroup StandardGroup;
 
         /// <summary>
         /// таблица габаритных свойств
@@ -30,13 +35,7 @@ namespace MCalcLib.classes
         /// </summary>
         public double DensityWeight { get; set; }
 
-        [Obsolete]
-        public object this[string key]
-        {
-            get;
-            set;            
-        }
-
+        
         public static Standard Init<T>()
         {
             Standard standard = new Standard();

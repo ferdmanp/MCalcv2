@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{38C9BBEE-B553-474C-BC0E-D081317FAC48}</ProjectGuid>
+    <ProjectGuid>{D8B19506-B946-45F9-8630-373E5D2D0A22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MCalcLib</RootNamespace>
-    <AssemblyName>MCalcLib</AssemblyName>
+    <RootNamespace>MCalc</RootNamespace>
+    <AssemblyName>MCalc</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -38,26 +38,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="attributes\BoundAttribute.cs" />
-    <Compile Include="attributes\ItemParameterAttribute.cs" />
-    <Compile Include="attributes\ItemPropertiesAttribute.cs" />
-    <Compile Include="classes\BoundsList.cs" />
-    <Compile Include="classes\Standard.cs" />
-    <Compile Include="classes\StandardGroup.cs" />
-    <Compile Include="classes\StandardValidator.cs" />
-    <Compile Include="exceptions\InvalidStandardException.cs" />
-    <Compile Include="GlobalEnums.cs" />
-    <Compile Include="interfaces\IStandardised.cs" />
-    <Compile Include="objects\objectBeam.cs" />
-    <Compile Include="objects\objectFixture.cs" />
-    <Compile Include="objects\objectItemBase.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="objects\Fixture.cs" />
+    <Compile Include="objects\ItemBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AttributesClassDiagram.cd" />
-    <None Include="ClassesClassDiagramm.cd" />
-    <None Include="ExceptionClassDiagram.cd" />
-    <None Include="ObjectsClassDiagramm.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
