@@ -1,24 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MCalcLib.objects.objectFixture">
-    <Position X="1" Y="2.75" Width="1.5" />
+  <Class Name="MCalcLib.objects.objectFixture" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQgAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>objects\objectFixture.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectItemBase" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>objects\objectItemBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MCalcLib.objects.objectBeam">
-    <Position X="4" Y="2.75" Width="1.5" />
+  <Class Name="MCalcLib.objects.objectBeam" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAQAABIAAAAAAAAgAgAQgAABEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\objectBeam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MCalcLib.objects.objectSimpleItemBase" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\objectSimpleItemBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectStandardItemBase">
+    <Position X="4" Y="1" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\objectStandardItemBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

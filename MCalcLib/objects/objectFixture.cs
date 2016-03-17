@@ -7,7 +7,7 @@ using MCalcLib.attributes;
 namespace MCalcLib.objects
 {
     [ItemProperties(DefaultName = @"Арматура")]
-    public class objectFixture : objectItemBase
+    public class objectFixture : objectSimpleItemBase
     {
         /// <summary>
         /// Диаметр детали

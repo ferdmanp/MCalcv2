@@ -19,8 +19,10 @@ namespace MCalcLib.objects
         /// Удельный вес погонного метра, кг
         /// </summary>
         [ItemParameter(DisplayName = @"Погонный вес")]
-        public double DensityWeight {
-            get { return GetSquare() * 1000 * TEMP_DENSITY; }            
+        public virtual double DensityWeight
+        {
+            get { return GetSquare() * 1000 * TEMP_DENSITY; }
+            set { DensityWeight = value; }
         }
 
         /// <summary>

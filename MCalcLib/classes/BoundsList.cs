@@ -13,7 +13,7 @@ namespace MCalcLib.classes
         //TODO: Реализовать IEnumerable
     public class BoundsList//:IEnumerable
     {
-        private Hashtable bounds;
+        private Hashtable bounds = new Hashtable();
 
         public object this[string key]
         {

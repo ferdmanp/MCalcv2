@@ -10,7 +10,7 @@ using MCalcLib.exceptions;
 namespace MCalcLib.objects
 {
     [ItemProperties(DefaultName=@"Балка двутавровая")]
-    public class objectBeam:objectItemBase,IStandardised
+    public class objectBeam:objectStandardItemBase,IStandardised
     {
         #region --Public--
 
@@ -26,21 +26,30 @@ namespace MCalcLib.objects
         [Bound(StandardName = "t", Description = "Средняя толщина полки")]
         public double AverageShelfThickness { get; set; }
 
+        public new double  DensityWeight { get; set; }
+
         #endregion
 
         #region --Private--
 
         Standard standard = Standard.Init<objectBeam>();
-
-        private ValidationResult validateStandard()
-        {
-            var result = ValidationResult.Failure;
-
-            return result;
-        }
+        string name = String.Empty;
 
         #endregion
 
+        #region --CTOR--
+        public objectBeam()
+        {
+            standard = Standard.Init<objectBeam>();
+        }
+
+        public objectBeam(Standard standard)
+        {
+            ApplyStandard(standard);
+        }
+
+        
+        #endregion
 
         #region --IStandardised members--
         /// <summary>
@@ -60,6 +69,7 @@ namespace MCalcLib.objects
                 this.ShelfWidth = (double)standard.Bounds["b"];
                 this.WebThickness = (double)standard.Bounds["S"];
                 this.AverageShelfThickness = (double)standard.Bounds["t"];
+                this.DensityWeight = standard.DensityWeight;
                 this.standard = standard;
             }
             else
@@ -77,7 +87,13 @@ namespace MCalcLib.objects
         {
             get
             {
-                throw new NotImplementedException();
+                if(String.IsNullOrEmpty(this.name))
+                {
+                    var attr = this.GetType().GetCustomAttributes(typeof(ItemPropertiesAttribute), false)[0] as ItemPropertiesAttribute;
+                    if (attr != null)
+                        this.name = attr.DefaultName;
+                }
+                return this.name;
             }
             set
             {

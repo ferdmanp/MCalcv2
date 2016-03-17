@@ -51,6 +51,8 @@
     <Compile Include="objects\objectBeam.cs" />
     <Compile Include="objects\objectFixture.cs" />
     <Compile Include="objects\objectItemBase.cs" />
+    <Compile Include="objects\objectSimpleItemBase.cs" />
+    <Compile Include="objects\objectStandardItemBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
