@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MCalcLib.attributes;
 
 namespace MCalcLib.objects
 {
     abstract class objectSimpleItemBase : objectItemBase
     {
+        const int TEMP_DENSITY = 1;
+
         protected objectSimpleItemBase()
         {
 
@@ -20,9 +23,19 @@ namespace MCalcLib.objects
 
 
         /// <summary>
-        /// Возвращает площадь простой фигуры
+        /// Удельный вес погонного метра, кг
+        /// </summary>
+        [ItemParameter(DisplayName = @"Погонный вес")]
+        public virtual double DensityWeight
+        {
+            get { return GetSquare() * 1000 * TEMP_DENSITY; }
+            set { DensityWeight = value; }
+        }
+
+        /// <summary>
+        /// Получает площадь сечения
         /// </summary>
         /// <returns></returns>
-        abstract public double GetSquare();
+        public abstract double GetSquare();
     }
 }

@@ -13,5 +13,6 @@ namespace MCalcLib.interfaces
         /// </summary>
         void ApplyStandard(Standard standard);
         
+
     }
 }

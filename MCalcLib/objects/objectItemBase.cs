@@ -8,27 +8,13 @@ namespace MCalcLib.objects
 {
     public abstract class objectItemBase
     {
-        const int TEMP_DENSITY = 1;
+        
         /// <summary>
         /// Название элемента
         /// </summary>
         [ItemParameter(DisplayName = @"Название")]
         public abstract string Name { get; set; }
 
-        /// <summary>
-        /// Удельный вес погонного метра, кг
-        /// </summary>
-        [ItemParameter(DisplayName = @"Погонный вес")]
-        public virtual double DensityWeight
-        {
-            get { return GetSquare() * 1000 * TEMP_DENSITY; }
-            set { DensityWeight = value; }
-        }
-
-        /// <summary>
-        /// Получает площадь сечения
-        /// </summary>
-        /// <returns></returns>
-        public abstract double GetSquare();
+        
     }
 }

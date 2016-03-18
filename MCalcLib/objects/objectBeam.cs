@@ -57,7 +57,7 @@ namespace MCalcLib.objects
         /// </summary>        
         /// <param name="standard">Экземпляр стандарта</param>
         /// <remarks>Если стандарт не проходит валидацию - выбрасывается исключение</remarks>
-        /// <exception cref="InvalidStandardException"/>
+        /// <exception cref="InvalidStandardException"/>        
         public void ApplyStandard(Standard standard)
         {
             StandardValidator<objectBeam> validator = new StandardValidator<objectBeam>();
