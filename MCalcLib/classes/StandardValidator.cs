@@ -15,8 +15,8 @@ namespace MCalcLib.classes
             var result = ValidationResult.Success;
 
             //var instance = Activator.CreateInstance<T>();
-
-            foreach(PropertyInfo property in typeof(T).GetProperties(BindingFlags.Public))
+            var propertyInfoArray = typeof(T).GetProperties();
+            foreach(PropertyInfo property in propertyInfoArray)
             {
                 foreach(var attr in property.GetCustomAttributes(typeof(BoundAttribute),false))
                 {

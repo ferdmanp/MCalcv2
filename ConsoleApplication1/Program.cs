@@ -12,8 +12,14 @@ namespace ConsoleApplication1
         {
             //var beam = new MCalcLib.objects.objectBeam();
             //beam.ApplyStandard(new MCalcLib.classes.Standard());
-            var fixture = new MCalcLib.objects.objectFixture(10.0);
-            Console.WriteLine(fixture.ToString());
+            var standard = MCalcLib.classes.Standard.Init<objectBeam>();
+            //standard.Bounds["h"] = 10;
+            //standard.Bounds["b"] = 100;
+            //standard.Bounds["S"] = 1000;
+            //standard.Bounds["t"] = 10000;
+
+            var beam = new objectBeam(standard);
+            //Console.WriteLine(fixture.ToString());
             Console.ReadKey();
             
         }

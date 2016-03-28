@@ -13,7 +13,7 @@ namespace MCalcLib.objects
     public class objectFixture:objectSimpleItemBase
     {
         private double _diameter;
-        private void CalculateParameters()
+        private void setParameters()
         {
             this.square = CalculateSquare();
             ///Формула S(m2)*L(m)*Density
@@ -33,7 +33,7 @@ namespace MCalcLib.objects
             set
             {
                 _diameter = value;
-                CalculateParameters();
+                setParameters();
 
             }
         } 
@@ -43,7 +43,7 @@ namespace MCalcLib.objects
         public objectFixture(double diameter):this()
         {            
             Diameter = diameter;
-            CalculateParameters();
+            setParameters();
         }
         
 

@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="MCalcLib.objects.objectItemBase">
-    <Position X="1" Y="1" Width="1.5" />
+    <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\objectItemBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectSimpleItemBase">
-    <Position X="1.5" Y="2.5" Width="1.5" />
+    <Position X="1" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAgAAAAIAQ=</HashCode>
       <FileName>objects\objectSimpleItemBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectStandardItemBase" Collapsed="true">
-    <Position X="4" Y="1" Width="4" />
+    <Position X="3.5" Y="1" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>objects\objectStandardItemBase.cs</FileName>
@@ -23,10 +23,31 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MCalcLib.objects.objectFixture">
-    <Position X="1.75" Y="5.75" Width="1.5" />
+    <Position X="1.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQQAAAAAAAAEAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQQAAAAAAAAEAAJAAAAAAA=</HashCode>
       <FileName>objects\objectFixture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectStripe" Collapsed="true">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABACAAAAEAAAAAEQAABAAAAAAAAAIAAAQAAA=</HashCode>
+      <FileName>objects\objectStripe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectQuadrat">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\objectQuadrat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectBeam">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAQAABAAAAAAAAAgAgAQgAABEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\objectBeam.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -14,10 +14,12 @@ namespace MCalcLib.classes
     public class BoundsList//:IEnumerable
     {
         private Hashtable bounds = new Hashtable();
+        //private HashSet<double> bounds = new HashSet<double>();
+        
 
-        public object this[string key]
+        public double this[string key]
         {
-            get { return this.bounds[key]; }
+            get { return Double.Parse(this.bounds[key].ToString()); }
             set
             {
                 if (bounds.ContainsKey(key))

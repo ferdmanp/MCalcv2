@@ -10,6 +10,11 @@ namespace MCalcLib.classes
 {
     public class Standard
     {
+        public Standard()
+        {
+            this.Bounds = new BoundsList();
+        }
+
         /// <summary>
         /// Название стандарта
         /// </summary>
@@ -30,7 +35,7 @@ namespace MCalcLib.classes
         /// <summary>
         /// таблица габаритных свойств
         /// </summary>
-        public BoundsList Bounds { get; set; }
+        public BoundsList Bounds;// { get; set; }
 
         /// <summary>
         /// Вес 1м погонного
@@ -43,7 +48,7 @@ namespace MCalcLib.classes
             Standard standard = new Standard();
             Type type = typeof(T);
 
-            foreach(var prop in type.GetProperties(BindingFlags.Public))
+            foreach(var prop in type.GetProperties())
             {
                 foreach(var attr in prop.GetCustomAttributes(typeof(BoundAttribute),false))
                 {
