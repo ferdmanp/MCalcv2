@@ -6,9 +6,15 @@ using MCalcLib.attributes;
 
 namespace MCalcLib.objects
 {
-    abstract class objectSimpleItemBase : objectItemBase
+    public abstract class objectSimpleItemBase : objectItemBase
     {
-        const int TEMP_DENSITY = 1;
+        /// <summary>
+        /// Плотность стали 7800 кг/м3
+        /// </summary>
+        protected const int TEMP_DENSITY = 7800;
+
+        protected double square;
+        protected double densityWeight;
 
         protected objectSimpleItemBase()
         {
@@ -28,14 +34,18 @@ namespace MCalcLib.objects
         [ItemParameter(DisplayName = @"Погонный вес")]
         public virtual double DensityWeight
         {
-            get { return GetSquare() * 1000 * TEMP_DENSITY; }
-            set { DensityWeight = value; }
+            get { return densityWeight; }
+            protected set { densityWeight = value; }
         }
 
         /// <summary>
-        /// Получает площадь сечения
+        /// Площадь сечения, мм^2
         /// </summary>
-        /// <returns></returns>
-        public abstract double GetSquare();
+        public virtual double Square 
+        {
+            get { return square; }
+            protected set { square = value; }
+        }
+        
     }
 }

@@ -15,6 +15,8 @@ namespace MCalcLib.classes
         /// </summary>
         public string Name { get; set; }
 
+        
+
         /// <summary>
         /// Описание ГОСТа
         /// </summary>
@@ -33,7 +35,7 @@ namespace MCalcLib.classes
         /// <summary>
         /// Вес 1м погонного
         /// </summary>
-        public double DensityWeight { get; set; }
+        public double StandardDensityWeight { get; set; }
 
         
         public static Standard Init<T>()

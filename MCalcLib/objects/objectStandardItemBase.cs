@@ -26,7 +26,10 @@ namespace MCalcLib.objects
 
 
 
-        protected abstract void ApplyStandard(Standard Standard);
+        public virtual void ApplyStandard(Standard Standard)
+        {
+            this.Standard = Standard;
+        }
         
     }
 }
