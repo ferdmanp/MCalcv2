@@ -60,5 +60,11 @@ namespace MCalcLib.classes
 
             return standard;
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+
+        }
     }
 }

@@ -1,37 +1,43 @@
-﻿//using System; 
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using MCalcLib.classes;
-//using MCalcLib.attributes;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MCalcLib.classes;
+using MCalcLib.attributes;
+using MCalcLib.interfaces;
 
-//namespace MCalcLib.objects
-//{
-//    [ItemProperties(DefaultName=@"Швеллер стандартный")]
-//    public class objectStandardChannel :objectStandardItemBase
-//    {
+namespace MCalcLib.objects
+{
+    [ItemProperties(DefaultName = @"Швеллер стандартный")]
+    public class objectStandardChannel:objectStandardItemBase
+    {
+        /// <summary>
+        /// Высота, мм
+        /// </summary>
+        [Bound(StandardName="h",Description="Высота, мм")]
+        public double Height { get; set; }
 
-        
+        /// <summary>
+        /// Ширина, мм
+        /// </summary>
+        [Bound(StandardName = "a", Description = "Ширина, мм")]
+        public double Width { get; set; }
 
-//        protected override void ApplyStandard(Standard Standard)
-//        {
-//            StandardValidator<objectStandardChannel> validator = new StandardValidator<objectStandardChannel>();
-//            if(validator.Validate(Standard)==ValidationResult.Success)
-//            {
+        /// <summary>
+        /// Толщина стенки, мм
+        /// </summary>
+        [Bound(StandardName="s",Description="Толщина стенки, мм")]
+        public double WallThickness { get; set; }
 
-//            }
-//        }
 
-//        public override string Name
-//        {
-//            get
-//            {
-//                throw new NotImplementedException();
-//            }
-//            set
-//            {
-//                throw new NotImplementedException();
-//            }
-//        }
-//    }
-//}
+        #region --objectStandardItemBase members--
+          public override string Name {get;set;}
+
+          public override void ApplyStandard(Standard Standard)
+          {
+              base.ApplyStandard(Standard);
+          }
+        #endregion
+
+    }
+}

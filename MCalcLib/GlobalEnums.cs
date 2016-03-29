@@ -1,4 +1,4 @@
 ﻿namespace MCalcLib
 {
-    public enum ValidationResult { Failure, Success }    
+    public enum ValidationResult { Undefined=-1, Failure, Success }    
 }

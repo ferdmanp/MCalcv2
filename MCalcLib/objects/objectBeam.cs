@@ -40,7 +40,8 @@ namespace MCalcLib.objects
         #region --CTOR--
         public objectBeam()
         {
-            standard = Standard.Init<objectBeam>();
+            Standard standard = Standard.Init<objectBeam>();
+            ApplyStandard(standard);
         }
 
         public objectBeam(Standard standard)
@@ -60,10 +61,13 @@ namespace MCalcLib.objects
         /// <exception cref="InvalidStandardException"/>        
         public override void ApplyStandard(Standard standard)
         {
-            base.ApplyStandard(standard);
+            base.ApplyStandard(standard);//TODO: Проверить логику!
             StandardValidator<objectBeam> validator = new StandardValidator<objectBeam>();
             //if standard not null and valid
             var validationResult = validator.Validate(standard);
+
+            System.Diagnostics.Debug.Assert(validationResult != ValidationResult.Undefined, @"Validation result is undefined!!!");
+
             if (validationResult == ValidationResult.Success)
             {
                 this.Height = standard.Bounds["h"];//.BoundProperties["h"];
