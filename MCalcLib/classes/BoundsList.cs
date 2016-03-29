@@ -11,27 +11,42 @@ namespace MCalcLib.classes
     /// </summary>
     
         //TODO: Реализовать IEnumerable
-    public class BoundsList//:IEnumerable
+    public class BoundsList:IEnumerable
     {
-        private Hashtable bounds = new Hashtable();
+        //private Hashtable bounds = new Hashtable();
         //private HashSet<double> bounds = new HashSet<double>();
+        private List<Bound> bounds = new List<Bound>();
         
 
         public double this[string key]
         {
-            get { return Double.Parse(this.bounds[key].ToString()); }
+            get
+            {
+                var val = from bound in bounds
+                          where bound.key == key
+                          select bound.value;
+                return val.FirstOrDefault();
+
+            }
             set
             {
-                if (bounds.ContainsKey(key))
-                    bounds[key] = value;
+                int index = bounds.FindIndex(p => p.key == key);
+
+                if(index>=0)
+                {
+                    var current = bounds[index];
+                    current.value= value;
+                }
                 else
-                    bounds.Add(key, value); 
+                    bounds.Add(new Bound { key=key, value=value}); 
             }
         }
 
-        //public IEnumerator GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IEnumerator GetEnumerator()
+        {
+            return ((IEnumerable)bounds).GetEnumerator();
+        }
+
+        
     }
 }

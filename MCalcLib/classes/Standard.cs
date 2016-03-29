@@ -63,7 +63,10 @@ namespace MCalcLib.classes
 
         public override string ToString()
         {
-            return base.ToString();
+            foreach(var bound in this.Bounds)
+            {
+                bound[]
+            }
 
         }
     }
