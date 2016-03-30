@@ -5,6 +5,7 @@ using System.Text;
 using MCalcLib.classes;
 using MCalcLib.attributes;
 using MCalcLib.interfaces;
+using MCalcLib.exceptions;
 
 namespace MCalcLib.objects
 {
@@ -30,12 +31,33 @@ namespace MCalcLib.objects
         public double WallThickness { get; set; }
 
 
+        public objectStandardChannel()
+        {
+            Standard standard = Standard.Init<objectStandardChannel>();
+            ApplyStandard(standard);
+        }
+
+        public objectStandardChannel(Standard standard)
+        {
+            ApplyStandard(standard);
+        }
+
         #region --objectStandardItemBase members--
           public override string Name {get;set;}
 
           public override void ApplyStandard(Standard Standard)
           {
-              base.ApplyStandard(Standard);
+              StandardValidator<objectStandardChannel> validator = new StandardValidator<objectStandardChannel>();
+              if (validator.Validate(Standard) == ValidationResult.Success)
+              {
+                  this.Height = Standard.Bounds["h"];
+                  this.Width = Standard.Bounds["a"];
+                  this.WallThickness = Standard.Bounds["s"];
+                  base.ApplyStandard(Standard);
+              }
+              else
+                  throw new InvalidStandardException();
+              
           }
         #endregion
 

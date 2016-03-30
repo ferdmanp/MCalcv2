@@ -4,21 +4,21 @@
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>objects\objectItemBase.cs</FileName>
+      <FileName>objects\base\objectItemBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectSimpleItemBase">
     <Position X="1" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAgAAAAIAQ=</HashCode>
-      <FileName>objects\objectSimpleItemBase.cs</FileName>
+      <FileName>objects\base\objectSimpleItemBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectStandardItemBase" Collapsed="true">
     <Position X="3.5" Y="1" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>objects\objectStandardItemBase.cs</FileName>
+      <FileName>objects\base\objectStandardItemBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -26,28 +26,35 @@
     <Position X="1.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQQAAAAAAAAEAAJAAAAAAA=</HashCode>
-      <FileName>objects\objectFixture.cs</FileName>
+      <FileName>objects\simple\objectFixture.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectStripe" Collapsed="true">
     <Position X="3.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABACAAAAEAAAAAEQAABAAAAAAAAAIAAAQAAA=</HashCode>
-      <FileName>objects\objectStripe.cs</FileName>
+      <FileName>objects\simple\objectStripe.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectQuadrat">
     <Position X="5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>objects\objectQuadrat.cs</FileName>
+      <FileName>objects\simple\objectQuadrat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MCalcLib.objects.objectBeam">
     <Position X="9.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAQAABAAAAAAAAAgAgAQgAABEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>objects\objectBeam.cs</FileName>
+      <HashCode>AAABAQAABAAAAAAAAAgAAAQgAABEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>objects\standard\objectBeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MCalcLib.objects.objectStandardChannel" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAABAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>objects\standard\objectStandardChannel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

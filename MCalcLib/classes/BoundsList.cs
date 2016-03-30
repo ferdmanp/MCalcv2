@@ -18,6 +18,11 @@ namespace MCalcLib.classes
         private List<Bound> bounds = new List<Bound>();
         
 
+        public bool ContainsKey(string key)
+        {
+            return bounds.Count>0 && bounds.Exists(p => p.key == key);
+        }
+
         public double this[string key]
         {
             get
@@ -34,8 +39,8 @@ namespace MCalcLib.classes
 
                 if(index>=0)
                 {
-                    var current = bounds[index];
-                    current.value= value;
+                    bounds[index] = new Bound{key=key,value=value};
+                    
                 }
                 else
                     bounds.Add(new Bound { key=key, value=value}); 

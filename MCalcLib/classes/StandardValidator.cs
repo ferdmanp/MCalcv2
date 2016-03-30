@@ -17,12 +17,12 @@ namespace MCalcLib.classes
             //var instance = Activator.CreateInstance<T>();
             var propertyInfoArray = typeof(T).GetProperties();
             foreach(PropertyInfo property in propertyInfoArray)
-            {
-                result = ValidationResult.Failure;
+            {                
                 foreach(var attr in property.GetCustomAttributes(typeof(BoundAttribute),false))
                 {
-                    string locStandardName = ((BoundAttribute)attr).StandardName;
-                    if (standard.Bounds[locStandardName] == null)
+                    result = ValidationResult.Failure;
+                    string locStandardName = ((BoundAttribute)attr).StandardName;                    
+                    if(!standard.Bounds.ContainsKey(locStandardName))
                         result = ValidationResult.Failure;
                     else
                         result = ValidationResult.Success;

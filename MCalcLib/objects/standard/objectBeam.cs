@@ -32,7 +32,7 @@ namespace MCalcLib.objects
 
         #region --Private--
 
-        Standard standard;// = Standard.Init<objectBeam>();
+       // Standard standard;// = Standard.Init<objectBeam>();
         string name = String.Empty;
 
         #endregion
@@ -60,8 +60,7 @@ namespace MCalcLib.objects
         /// <remarks>Если стандарт не проходит валидацию - выбрасывается исключение</remarks>
         /// <exception cref="InvalidStandardException"/>        
         public override void ApplyStandard(Standard standard)
-        {
-            base.ApplyStandard(standard);//TODO: Проверить логику!
+        {            
             StandardValidator<objectBeam> validator = new StandardValidator<objectBeam>();
             //if standard not null and valid
             var validationResult = validator.Validate(standard);
@@ -75,7 +74,7 @@ namespace MCalcLib.objects
                 this.WebThickness = standard.Bounds["S"];
                 this.AverageShelfThickness = standard.Bounds["t"];
                 this.DensityWeight = standard.StandardDensityWeight;
-                this.standard = standard;
+                base.ApplyStandard(standard);
                 
             }
             else
