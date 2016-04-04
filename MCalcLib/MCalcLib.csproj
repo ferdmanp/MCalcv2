@@ -51,6 +51,8 @@
     <Compile Include="GlobalEnums.cs" />
     <Compile Include="interfaces\IStandardised.cs" />
     <Compile Include="objects\simple\objectQuadratTube.cs" />
+    <Compile Include="objects\simple\objectRoundTube.cs" />
+    <Compile Include="objects\simple\objectSheet.cs" />
     <Compile Include="objects\standard\objectBeam.cs" />
     <Compile Include="objects\simple\objectFixture.cs" />
     <Compile Include="objects\base\objectItemBase.cs" />

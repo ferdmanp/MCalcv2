@@ -46,6 +46,14 @@ namespace MCalcLib.objects
             get { return square; }
             protected set { square = value; }
         }
+
+        protected virtual void setParameters()
+        {
+            this.square = calculateSquare();
+            this.densityWeight = this.square / 1000000000.0 * 1000 * TEMP_DENSITY;
+        }
+
+        protected abstract double calculateSquare();
         
     }
 }

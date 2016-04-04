@@ -61,12 +61,12 @@ namespace MCalcLib.objects
 
         public objectStripe(double width, double height):this(width,height,null) { }
         
-        private double calculateSquare()
+        protected override double calculateSquare()
         {
             return _width * _height;
         }
 
-        private void setParameters()
+        protected override void setParameters()
         {
             this.square = calculateSquare();
             this.densityWeight= this.square / 1000000000.0 * 1000 * TEMP_DENSITY;

@@ -13,9 +13,9 @@ namespace MCalcLib.objects
     public class objectFixture:objectSimpleItemBase
     {
         private double _diameter;
-        private void setParameters()
+        protected override void setParameters()
         {
-            this.square = CalculateSquare();
+            this.square = calculateSquare();
             ///Формула S(m2)*L(m)*Density
             this.densityWeight = this.square / 1000000000.0*1000* TEMP_DENSITY;
         }
@@ -51,7 +51,7 @@ namespace MCalcLib.objects
 
         #region --objectSimpleItemBase--
 
-        private double CalculateSquare()
+        protected override double calculateSquare()
         {
             Debug.Assert(Diameter > 0, @"Diameter value is invalid!");
             if (Diameter <= 0) throw new InvalidBoundParameterException(@"Диаметр не может быть меньше или равен 0");
