@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCalcLib", "MCalcLib\MCalcL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeStandard", "FakeStandard\FakeStandard.csproj", "{753A4237-E66A-4654-A2C0-21E225FDD952}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCalcLibTests", "MCalcLibTests\MCalcLibTests.csproj", "{84928B97-B25C-4FD2-9EDA-6F298D2FCBDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{753A4237-E66A-4654-A2C0-21E225FDD952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{753A4237-E66A-4654-A2C0-21E225FDD952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{753A4237-E66A-4654-A2C0-21E225FDD952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84928B97-B25C-4FD2-9EDA-6F298D2FCBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84928B97-B25C-4FD2-9EDA-6F298D2FCBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84928B97-B25C-4FD2-9EDA-6F298D2FCBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84928B97-B25C-4FD2-9EDA-6F298D2FCBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

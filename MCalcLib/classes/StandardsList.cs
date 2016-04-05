@@ -15,18 +15,25 @@ namespace MCalcLib.classes
         int index = -1;
         int currentArraySize = 100;
         const int arrayGrowSize = 100;
+        int counter = 0;
 
         public  int Length { get {return index;} }
         public  int Capacity {get {return currentArraySize;} }
+
+        public int Count()
+        {
+            return index + 1;
+        }
 
         public int Add(Standard standard)
         {
 
             if (index == standards.Length - 1)
-                reallocArray();
+                expandArray();
 
             standards[++index] = standard;
 
+            counter++;
             return index;
         }
 
@@ -36,6 +43,7 @@ namespace MCalcLib.classes
                 throw new IndexOutOfRangeException();
 
             standards[index] = standard;
+            counter++;
             return index;
         }
 
@@ -44,7 +52,15 @@ namespace MCalcLib.classes
             if (index == this.index)
                 RemoveLast();
             else
+            {
                 standards[index] = null;
+                reindexArray();
+            }
+            
+        }
+
+        private void reindexArray()
+        {
             
         }
 
@@ -54,7 +70,7 @@ namespace MCalcLib.classes
             index--;
         }
 
-        private void reallocArray()
+        private void expandArray()
         {
             currentArraySize+=arrayGrowSize;
             Standard[] locStandards = new Standard[currentArraySize];
