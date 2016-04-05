@@ -32,7 +32,7 @@ namespace MCalcLib.objects
 
 
         public objectStandardChannel()
-        {
+        { 
             Standard standard = Standard.Init<objectStandardChannel>();
             ApplyStandard(standard);
         }

@@ -43,7 +43,7 @@ namespace MCalcLib.classes
         public double StandardDensityWeight { get; set; }
 
         
-        public static Standard Init<T>()
+        public static Standard Init<T>() where T : objects.objectStandardItemBase
         {
             Standard standard = new Standard();
             Type type = typeof(T);
@@ -54,12 +54,52 @@ namespace MCalcLib.classes
                 {
                     string key = ((BoundAttribute)attr).StandardName;
                     standard.Bounds[key] = 1.0;
-                    //standard.DensityWeight
+                    standard.StandardDensityWeight = 1.0;
                 }
             }
 
             return standard;
         }
+
+        public static Standard Init<T>(BoundsList bounds) where T : objects.objectStandardItemBase
+        {
+            Standard standard = new Standard();
+            Type type = typeof(T);
+
+            foreach (var prop in type.GetProperties())
+            {
+                foreach (var attr in prop.GetCustomAttributes(typeof(BoundAttribute), false))
+                {
+                    string key = ((BoundAttribute)attr).StandardName;
+                    standard.Bounds[key] = bounds[key];                    
+                }
+            }
+
+            return standard;
+        }
+
+        public static Standard Init<T>(Hashtable paramsTable) where T : objects.objectStandardItemBase
+        {
+            Standard standard = new Standard();
+
+            Type type = typeof(T);
+
+            foreach (var prop in type.GetProperties())
+            {
+                foreach (var attr in prop.GetCustomAttributes(typeof(BoundAttribute), false))
+                {
+                    string key = ((BoundAttribute)attr).StandardName;
+                    if (paramsTable.ContainsKey(key))
+                    {
+                        standard.Bounds[key] = Convert.ToDouble(paramsTable[key]);
+                    } else { /*DO NOTHING*/}
+                }
+            }
+
+            return standard;
+        }
+
+
 
         public override string ToString()
         {
