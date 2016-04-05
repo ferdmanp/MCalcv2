@@ -1,4 +1,5 @@
 ﻿using MCalcLib.objects;
+using MCalcLib.classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,23 +11,28 @@ namespace ConsoleApplication1
     {
         static void Main()
         {
-            //var beam = new MCalcLib.objects.objectBeam();
-            //beam.ApplyStandard(new MCalcLib.classes.Standard());
-            //var standard = MCalcLib.classes.Standard.Init<objectBeam>();
-            //standard.Bounds["h"] = 10;
-            //standard.Bounds["b"] = 100;
-            //standard.Bounds["S"] = 1000;
-            //standard.Bounds["t"] = 10000;
-            //standard.StandardDensityWeight = 500;
+            MCalcLib.classes.StandardsList list = new StandardsList();
+            Console.WriteLine(@"Lenth: {0} Capacity {1}", list.Length, list.Capacity);
 
-            //var beam = new objectBeam(standard);
+            for (int i = 0; i < 100;i++ )
+            {
+                list.Add(Standard.Init<objectBeam>());
+            }
 
-            var tube = new MCalcLib.objects.objectRoundTube(10,1);
+            Console.WriteLine(@"Lenth: {0} Capacity {1}", list.Length, list.Capacity);
 
-            Console.WriteLine(tube.DensityWeight);
-            Console.WriteLine(tube.Square);
-            //Console.WriteLine(fixture.ToString());
-            Console.ReadKey();
+            for (int i = 0; i < 100; i++)
+            {
+                list.Add(Standard.Init<objectStandardChannel>());
+            }
+
+            Console.WriteLine(@"Lenth: {0} Capacity {1}", list.Length, list.Capacity);
+
+            Console.WriteLine(list[5]);
+            Console.WriteLine(list[188]);
+            Console.WriteLine(list[205]);
+
+                Console.ReadKey();
             
         }
     }

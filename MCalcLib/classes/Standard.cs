@@ -42,6 +42,9 @@ namespace MCalcLib.classes
         /// </summary>
         public double StandardDensityWeight { get; set; }
 
+        bool autoInited = false;
+        string initedTypeName;
+
         
         public static Standard Init<T>() where T : objects.objectStandardItemBase
         {
@@ -58,10 +61,14 @@ namespace MCalcLib.classes
                 }
             }
 
+            standard.autoInited = true;
+            standard.initedTypeName = type.FullName;
+            
+
             return standard;
         }
 
-        public static Standard Init<T>(BoundsList bounds) where T : objects.objectStandardItemBase
+        public static Standard Init<T>(BoundsList bounds, double densityWeight) where T : objects.objectStandardItemBase
         {
             Standard standard = new Standard();
             Type type = typeof(T);
@@ -71,14 +78,18 @@ namespace MCalcLib.classes
                 foreach (var attr in prop.GetCustomAttributes(typeof(BoundAttribute), false))
                 {
                     string key = ((BoundAttribute)attr).StandardName;
-                    standard.Bounds[key] = bounds[key];                    
+                    standard.Bounds[key] = bounds[key];
+                    standard.StandardDensityWeight = densityWeight;
                 }
             }
+
+            standard.autoInited = true;
+            standard.initedTypeName = type.FullName;
 
             return standard;
         }
 
-        public static Standard Init<T>(Hashtable paramsTable) where T : objects.objectStandardItemBase
+        public static Standard Init<T>(Hashtable paramsTable, double densityWeight) where T : objects.objectStandardItemBase
         {
             Standard standard = new Standard();
 
@@ -92,9 +103,13 @@ namespace MCalcLib.classes
                     if (paramsTable.ContainsKey(key))
                     {
                         standard.Bounds[key] = Convert.ToDouble(paramsTable[key]);
+                        standard.StandardDensityWeight = densityWeight;
                     } else { /*DO NOTHING*/}
                 }
             }
+
+            standard.autoInited = true;
+            standard.initedTypeName = type.FullName;
 
             return standard;
         }
@@ -103,7 +118,14 @@ namespace MCalcLib.classes
 
         public override string ToString()
         {
-            return base.ToString();
+            if (autoInited)
+            {
+                return initedTypeName;
+            }
+            else
+            {
+                return base.ToString();
+            }
 
         }
     }

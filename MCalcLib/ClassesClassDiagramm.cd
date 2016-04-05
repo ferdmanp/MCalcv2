@@ -3,7 +3,7 @@
   <Class Name="MCalcLib.classes.Standard">
     <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQgAAAAAABAAAACAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAQAAAgAAAEAAAAAAQAAAAAAABAAAACAgAAAwA=</HashCode>
       <FileName>classes\Standard.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,9 +17,10 @@
   <Class Name="MCalcLib.classes.BoundsList">
     <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEABAACAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>classes\BoundsList.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="MCalcLib.classes.StandardGroup" Collapsed="true">
     <Position X="5.5" Y="1.5" Width="1.5" />
@@ -28,5 +29,20 @@
       <FileName>classes\StandardGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="MCalcLib.classes.StandardsList" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAAACAAAABBAACACAhABCAAAAAAAAYAABAAABAAA=</HashCode>
+      <FileName>classes\StandardsList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="MCalcLib.classes.Bound" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>classes\Bound.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

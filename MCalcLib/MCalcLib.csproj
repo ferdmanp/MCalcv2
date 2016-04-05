@@ -45,6 +45,7 @@
     <Compile Include="classes\BoundsList.cs" />
     <Compile Include="classes\Standard.cs" />
     <Compile Include="classes\StandardGroup.cs" />
+    <Compile Include="classes\StandardsList.cs" />
     <Compile Include="classes\StandardValidator.cs" />
     <Compile Include="exceptions\InvalidBoundParameterException.cs" />
     <Compile Include="exceptions\InvalidStandardException.cs" />
